@@ -16,7 +16,7 @@ const App = () => {
       if(name === "fName") {
         return{
          ...prevValue,
-         [name] : value;
+         [name] : value
         };
 
       }
