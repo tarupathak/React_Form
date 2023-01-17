@@ -15,24 +15,8 @@ const App = () => {
     setContact((prevValue) => {
       if(name === "fName") {
         return{
-         fName : value,
-         lName : prevValue.lName,
-         email : prevValue.email
-        };
-      }
-      else if(name === "lName") {
-        return{
-        fName : prevValue.fName,
-        lName : value,
-        email : prevValue.email
-        };
-
-      }
-      else if(name === "email") {
-        return {
-        fName : prevValue.fName,
-        lName : prevValue.lName,
-        email : value
+         ...prevValue,
+         [name] : value;
         };
 
       }
